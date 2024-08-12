@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#111 , #222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 0, 0, 0.838);
+    clip-path:circle(30% at right 70%) ;
+
+}
+::selection{
+    color: #fff;
+    background-color: grey;
+}
+#hero{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px; 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    padding: 10px 0;
+}
+header h1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: 700;
+}
+nav ul{
+    display: flex;
+   
+}
+nav ul li{
+    padding: 20px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color: red;
+}
+.king{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.left{
+    width: 40%;
+}
+.left h3{
+    font-size: 35px;
+    color: aliceblue;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.left h4{
+    color: aliceblue;
+    letter-spacing: 1.5px;
+}
+.left p{
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 25px;
+}
+.right{
+    width: 40%;
+}
+.right img{
+    width: 300px;
+   
+}
+
+@media (max-width:950px){
+    .right img{
+        width: 00px;
+    }
+    .king{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .king{
+        width: 100%;
+    }
+    body::after{
+
+        background: rgba(255, 0, 0, 0.838);
+        clip-path:circle(50% at bottom ) ;
+    
+    }
+    header{
+     flex-direction: column;
+     align-items: center;
+    }
+    .left{
+        
+        width: 70%;
+        margin: -10px;
+    }
+    .left h3{
+        margin-top: -150px;
+    }
+}
